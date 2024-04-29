@@ -6,11 +6,10 @@ from sentinelhub import  SHConfig, MimeType
 
 CONFIG = utils.parse_app_config()
 config = SHConfig()
-config.instance_id       = CONFIG['Sentinel']['InstanceId'].get()
-config.sh_client_id      = CONFIG['Sentinel']['ClientId'].get()
-config.sh_client_secret  = CONFIG['Sentinel']['ClientSecret'].get()
-
-
+config.instance_id       =  CONFIG['Sentinel']['InstanceId'].get() #'ce7942da-a85c-4e51-a1e4-93891c02b01a'
+config.sh_client_id      =  CONFIG['Sentinel']['ClientId'].get() #'b7d4c014-806b-4cd6-9bf9-fb44b65e11a3'               
+config.sh_client_secret  =   CONFIG['Sentinel']['ClientSecret'].get() #'5JsIcvJp0AX570yngRoRcxQhwtCWRrFe'     
+ 
 def Download_image_in_given_date(clientName, metric, df, field, date, mime_type = MimeType.TIFF):
     sen_obj = SenHub(config, mime_type = mime_type)
     download_path = f'./{clientName}/raw/{metric}/{date}/field_{field}/'

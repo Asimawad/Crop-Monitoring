@@ -1,5 +1,6 @@
 .streamlit
 .vscode
+venv
 __*
 *.ipynb*
 raw*

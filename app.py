@@ -16,8 +16,6 @@ def add_bg_from_url():
             unsafe_allow_html=True
         )
 
- 
-
 def check_password():
     """Returns `True` if the user had a correct password."""
 
